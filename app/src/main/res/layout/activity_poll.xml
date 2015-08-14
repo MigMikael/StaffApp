@@ -49,8 +49,7 @@
                         android:textIsSelectable="true"
                         android:layout_centerHorizontal="true"
                         android:layout_below="@id/scan_button"
-                        android:gravity="top"
-                        android:text="SCAN CONTENT ::"/>
+                        android:gravity="top"/>
                     <TextView
                         android:id="@+id/scan_content"
                         android:layout_width="wrap_content"
