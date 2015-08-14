@@ -35,7 +35,7 @@
                     <Button android:id="@+id/scan_button"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:gravity="start"
+                        android:gravity="bottom"
                         android:onClick="scanQR"
                         android:textColor="@color/button_text_color"
                         android:backgroundTint="@color/button_color"
