@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Mig\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.0.1\9ebf6cd580d67601fbf88fd007aab4703b19e4c2\core-3.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9ebf6cd580d67601fbf88fd007aab4703b19e4c2">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\core-3.0.1-1b8fccabef5699bcda91403cc6f10ba59fbfb9bb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-legacy\2.0.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7eb68150c290a271a716675ebdfd176eac694124">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-2c43820687c76c11100b14018e284682e39f6465.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-b38038e8511ddb22eca6829a13f9b8594172ddaa.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\2.0.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f38c1fe0ee3d0ef717e7f32131719fccf07fd6c7">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-f9f6ec39b83bbe76c72e73ecef57b416a13fa141.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-015aa453ec46242c043370a719860cd507310201.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-9136a133f3ff099ad228544e752c1f2b119af85b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-136aab67aa7bfbeb219a020bf9f4b7e79da75035.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-baa4cd501712b7cfd751a77c523c9bfbd867b39c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-70995ee115b5a80e8375e9c8f11b39a9185c0430.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-integration\2.0.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d4d7d4290dc3f13bdb95a92b2377d78e66084dfa">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-7f1ca0a77b6646bdfc4a6fb489780ef58157fb63.jar" />
+    </item>
+
+</items>
