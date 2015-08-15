@@ -16,7 +16,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_logo"/>
 
@@ -27,7 +27,8 @@
         android:id="@+id/RoomStaffButton"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/button_color"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:background="@color/button_color" />
 
     <Space
         android:layout_width="wrap_content"
@@ -41,6 +42,7 @@
         android:id="@+id/PollStaffButton"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/button_color"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:background="@color/button_color" />
 
 </LinearLayout>

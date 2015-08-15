@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class LoadPlaceTask extends AsyncTask<String, Void, String> implements View.OnClickListener {
 
     private Context mContext;
-    String[] roomName;
+    String[] roomName=null;
     private String selectRoom = "1";
     Button chooseRoom;
 
@@ -113,8 +113,10 @@ public class LoadPlaceTask extends AsyncTask<String, Void, String> implements Vi
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                String selectRoomName = roomName[Integer.parseInt(selectRoom)-1];
-                chooseRoom.setText(selectRoomName);
+                if (roomName.length > 1) {
+                    String selectRoomName = roomName[Integer.parseInt(selectRoom) - 1];
+                    chooseRoom.setText(selectRoomName);
+                }
                 dialog.dismiss();
             }
         });

@@ -6,70 +6,70 @@
         jumboMode="false"
         revision="21.1.2"
         sha1="7eb68150c290a271a716675ebdfd176eac694124">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-8c14b0357772e3bbc1c4fdd36f2e6d39fa8c15da.jar" />
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\classes-8c14b0357772e3bbc1c4fdd36f2e6d39fa8c15da.jar" />
     </item>
     <item
         jar="C:\Users\Mig\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.0.1\9ebf6cd580d67601fbf88fd007aab4703b19e4c2\core-3.0.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="9ebf6cd580d67601fbf88fd007aab4703b19e4c2">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\core-3.0.1-1b8fccabef5699bcda91403cc6f10ba59fbfb9bb.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-b02b59f35ef63b1557b2dc6d952a5c173538e71d.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-28f437fbf81e1aea14bfda4f17d8b85ec18e81cd.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-integration\2.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d4d7d4290dc3f13bdb95a92b2377d78e66084dfa">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-c56761dcca08a1f69c59e1006bc81a20d10eb1a8.jar" />
-    </item>
-    <item
-        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-3a011884fde5517e51f562774c2724280bf06188.jar" />
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\core-3.0.1-1b8fccabef5699bcda91403cc6f10ba59fbfb9bb.jar" />
     </item>
     <item
         jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-embedded\2.0.1\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="f38c1fe0ee3d0ef717e7f32131719fccf07fd6c7">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-1174453d9d7d3ea55f550c0495eda2233a3a9faf.jar" />
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\classes-1174453d9d7d3ea55f550c0495eda2233a3a9faf.jar" />
     </item>
     <item
-        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\jars\classes.jar"
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-d63dbe034530e96228c61700993df993826222b2.jar" />
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\internal_impl-22.2.1-b02b59f35ef63b1557b2dc6d952a5c173538e71d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\classes-28f437fbf81e1aea14bfda4f17d8b85ec18e81cd.jar" />
     </item>
     <item
         jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="1821601ddbec5ff125653097812823388700af74">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\classes-347b464f863dd9db4697b0372f6046d0d0b46aad.jar" />
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\classes-347b464f863dd9db4697b0372f6046d0d0b46aad.jar" />
     </item>
     <item
         jar="C:\Users\Mig\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-baa4cd501712b7cfd751a77c523c9bfbd867b39c.jar" />
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\support-annotations-22.2.1-baa4cd501712b7cfd751a77c523c9bfbd867b39c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\classes-d63dbe034530e96228c61700993df993826222b2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\classes-3a011884fde5517e51f562774c2724280bf06188.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\exploded-aar\com.journeyapps\zxing-android-integration\2.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d4d7d4290dc3f13bdb95a92b2377d78e66084dfa">
+        <dex dex="C:\Users\Mig\Documents\StaffApp\app\build\intermediates\pre-dexed\release\classes-c56761dcca08a1f69c59e1006bc81a20d10eb1a8.jar" />
     </item>
 
 </items>
