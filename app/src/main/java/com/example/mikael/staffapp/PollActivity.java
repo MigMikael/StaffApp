@@ -24,6 +24,7 @@ public class PollActivity extends ActionBarActivity {
     private String scanFormat = "";
 
     LoadPollTask loadPoll;
+    LoadChoiceTask loadChoice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
