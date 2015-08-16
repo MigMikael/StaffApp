@@ -24,40 +24,36 @@
             android:layout_marginRight="9dp"
             card_view:cardElevation="0.01dp"
             android:layout_marginBottom="0dp">
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/qr_top_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button android:id="@+id/scan_button"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_centerHorizontal="true"
                     android:onClick="scanQR"
-                    android:textColor="@color/button_text_color"
                     android:backgroundTint="@color/button_color"
-                    android:background="@drawable/ic_qr"
-                    android:elevation="12dp"
-                    android:layout_marginBottom="5dp" />
-                <TextView
-                    android:id="@+id/scan_format"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textIsSelectable="true"
-                    android:text=""
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/scan_button"
-                    android:gravity="top"/>
-                <TextView
-                    android:id="@+id/scan_content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textIsSelectable="true"
-                    android:text=""
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/scan_format"
-                    android:layout_marginBottom="20dp"/>
-            </RelativeLayout>
+                    android:background="@drawable/ic_qr" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/scan_format"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true" />
+                    <TextView
+                        android:id="@+id/scan_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+            </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -92,33 +88,31 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
 
-                <RadioButton
-                    android:layout_width="wrap_content"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/q1_choice1"
-                    android:text="ห้อง 1 "
                     android:layout_below="@+id/q1_question"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:checked="false" />
+                    android:layout_alignParentStart="true">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ห้อง 2"
-                    android:id="@+id/q1_choice2"
-                    android:layout_below="@+id/q1_choice1"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/q1_choice1"
+                        android:text="ห้อง 1 "/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ห้อง 3"
-                    android:id="@+id/radioButton3"
-                    android:layout_below="@+id/q1_choice2"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ห้อง 2"
+                        android:id="@+id/q1_choice2"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ห้อง 3"
+                        android:id="@+id/q1_choice3"/>
+                </RadioGroup>
 
             </RelativeLayout>
         </android.support.v7.widget.CardView>
@@ -168,7 +162,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/Send_button"
+            android:id="@+id/send_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -176,6 +170,14 @@
             android:layout_below="@+id/questionTwo"
             app:fabSize="normal"
             android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/sentstatus_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/send_button"
+            android:layout_marginBottom="20dp"/>
 
     </RelativeLayout>
 </RelativeLayout>

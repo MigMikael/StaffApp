@@ -24,6 +24,8 @@ public class MainActivity extends ActionBarActivity {
     private CheckPoint checkPoint;
     LoadPlaceTask loadPlace;
 
+    FloatingActionButton sendButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
         //Toast toast = Toast.makeText(MainActivity.this,roomName[1], Toast.LENGTH_SHORT);
         //toast.show();
 
-        FloatingActionButton sendButton = (FloatingActionButton) findViewById(R.id.Send_button);
+        sendButton = (FloatingActionButton) findViewById(R.id.send_button);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

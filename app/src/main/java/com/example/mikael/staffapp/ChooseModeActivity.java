@@ -36,6 +36,7 @@ public class ChooseModeActivity extends Activity {
                 }
             });
             builder.show();
+            finish();
         }
 
         Button RoomStaff = (Button)findViewById(R.id.RoomStaffButton);

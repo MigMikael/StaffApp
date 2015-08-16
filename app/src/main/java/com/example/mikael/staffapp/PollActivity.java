@@ -3,10 +3,13 @@ package com.example.mikael.staffapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +27,14 @@ public class PollActivity extends ActionBarActivity {
     private String scanFormat = "";
 
     LoadPollTask loadPoll;
-    LoadChoiceTask loadChoice;
+
+    RadioButton choice1,choice2,choice3;
+    RatingBar ratingBar;
+
+    PollVote q1PollVote;
+    PollVote q2PollVote;
+
+    FloatingActionButton sendButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +47,59 @@ public class PollActivity extends ActionBarActivity {
 
         loadPoll = new LoadPollTask(PollActivity.this);
         loadPoll.execute("http://scienceweek58.herokuapp.com/api/poll_votes");
+
+        q1PollVote = new PollVote("53","1");
+        //q1PollVote = new PollVote(scanContent,"1");
+        choice1 = (RadioButton) findViewById(R.id.q1_choice1);
+        choice1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                q1PollVote.setChoice("1");
+                Toast.makeText(PollActivity.this,q1PollVote.getChoice(),Toast.LENGTH_SHORT).show();
+            }
+        });
+        choice2 = (RadioButton) findViewById(R.id.q1_choice2);
+        choice2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                q1PollVote.setChoice("2");
+                Toast.makeText(PollActivity.this,q1PollVote.getChoice(),Toast.LENGTH_SHORT).show();
+            }
+        });
+        choice3 = (RadioButton) findViewById(R.id.q1_choice3);
+        choice3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                q1PollVote.setChoice("3");
+                Toast.makeText(PollActivity.this,q1PollVote.getChoice(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        q2PollVote = new PollVote("53", "2");
+        //q2PollVote = new PollVote(scanContent, "2");
+        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean b) {
+                int rateInt = (int)rating;
+                q2PollVote.setChoice(String.valueOf(rateInt));
+            }
+        });
+
+        sendButton = (FloatingActionButton) findViewById(R.id.send_button);
+        sendButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //PostPollTask taskOne = new PostPollTask(PollActivity.this, q1PollVote);
+                //taskOne.execute("http://scienceweek58.herokuapp.com/api/poll_tables");
+                //taskOne.execute("http://posttestserver.com/post.php");
+
+                PostPollTask taskTwo = new PostPollTask(PollActivity.this, q2PollVote);
+                //taskTwo.execute("http://scienceweek58.herokuapp.com/api/poll_tables");
+                taskTwo.execute("http://posttestserver.com/post.php");
+            }
+        });
     }
 
     @Override
