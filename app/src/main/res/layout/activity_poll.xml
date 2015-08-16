@@ -46,12 +46,18 @@
                         android:id="@+id/scan_format"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textIsSelectable="true" />
+                        android:textIsSelectable="true"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="testttttttttttttt"
+                        android:gravity="center" />
                     <TextView
                         android:id="@+id/scan_content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textIsSelectable="true" />
+                        android:textIsSelectable="true"
+                        android:text="testttttttttttttt"
+                        android:gravity="center" />
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
