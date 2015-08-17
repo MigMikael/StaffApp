@@ -26,6 +26,7 @@ public class ChooseModeActivity extends Activity {
         connectStatus = (TextView)findViewById(R.id.connect_status);
 
         if(!isConnected()){
+            connectStatus.setVisibility(View.VISIBLE);
             connectStatus.setText("You are NOT conncted");
             AlertDialog.Builder builder = new AlertDialog.Builder(ChooseModeActivity.this);
             builder.setMessage("Please Connect Internet");
@@ -33,10 +34,10 @@ public class ChooseModeActivity extends Activity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
+                    finish();
                 }
             });
             builder.show();
-            finish();
         }
 
         Button RoomStaff = (Button)findViewById(R.id.RoomStaffButton);

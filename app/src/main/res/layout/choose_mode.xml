@@ -12,13 +12,13 @@
         android:id="@+id/connect_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textIsSelectable="true"
         android:background="#FF0000"
         android:textColor="#FFF"
         android:textSize="18sp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
-        android:gravity="center" />
+        android:gravity="center"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/logo"
@@ -39,7 +39,7 @@
             android:text="Room Stuff"
             android:id="@+id/RoomStaffButton"
             android:backgroundTint="@color/button_color"
-            android:textColor="#ffffff"
+            android:textColor="@color/button_text_color"
             android:background="@color/button_color"
             android:layout_centerHorizontal="true"
             android:layout_weight="1" />
@@ -57,7 +57,7 @@
             android:text="Poll Staff"
             android:id="@+id/PollStaffButton"
             android:backgroundTint="@color/button_color"
-            android:textColor="#ffffff"
+            android:textColor="@color/button_text_color"
             android:background="@color/button_color"
             android:layout_below="@+id/space_button"
             android:layout_centerHorizontal="true"
