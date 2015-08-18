@@ -5,18 +5,18 @@ package com.example.mikael.staffapp;
  */
 public class PollVote {
     private String user_id;
-    private String poll_id;
-    private String choice;
+    private String poll_vote_id;
+    private String choice_vote_id;
 
     public PollVote(String user_id, String poll_id) {
         this.user_id = user_id;
-        this.poll_id = poll_id;
+        this.poll_vote_id = poll_id;
     }
 
     public PollVote(String user_id, String poll_id, String choice) {
         this.user_id = user_id;
-        this.poll_id = poll_id;
-        this.choice = choice;
+        this.poll_vote_id = poll_id;
+        this.choice_vote_id = choice;
     }
 
     public String getUser_id() {
@@ -24,11 +24,11 @@ public class PollVote {
     }
 
     public String getPoll_id() {
-        return poll_id;
+        return poll_vote_id;
     }
 
     public String getChoice() {
-        return choice;
+        return choice_vote_id;
     }
 
     public void setUser_id(String user_id) {
@@ -36,10 +36,14 @@ public class PollVote {
     }
 
     public void setPoll_id(String poll_id) {
-        this.poll_id = poll_id;
+        this.poll_vote_id = poll_id;
     }
 
     public void setChoice(String choice) {
-        this.choice = choice;
+        this.choice_vote_id = choice;
     }
 }
+
+/*
+user_id   choice_vote_id   poll_vote_id
+*/

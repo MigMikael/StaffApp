@@ -21,7 +21,7 @@ import com.google.zxing.integration.android.IntentResult;
  */
 public class PollActivity extends ActionBarActivity {
 
-    private TextView formatTxt, contentTxt;
+    private TextView contentTxt;
 
     private String scanContent = "";
     private String scanFormat = "";
@@ -42,7 +42,6 @@ public class PollActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poll);
 
-        formatTxt = (TextView)findViewById(R.id.scan_format);
         contentTxt = (TextView)findViewById(R.id.scan_content);
 
         loadPoll = new LoadPollTask(PollActivity.this);
@@ -96,8 +95,8 @@ public class PollActivity extends ActionBarActivity {
                 //taskOne.execute("http://posttestserver.com/post.php");
 
                 PostPollTask taskTwo = new PostPollTask(PollActivity.this, q2PollVote);
-                //taskTwo.execute("http://scienceweek58.herokuapp.com/api/poll_tables");
-                taskTwo.execute("http://posttestserver.com/post.php");
+                taskTwo.execute("http://scienceweek58.herokuapp.com/api/poll_tables");
+                //taskTwo.execute("http://posttestserver.com/post.php");
             }
         });
     }
@@ -141,7 +140,6 @@ public class PollActivity extends ActionBarActivity {
             scanContent = scanningResult.getContents();
             scanFormat = scanningResult.getFormatName();
 
-            formatTxt.setText("FORMAT: " + scanFormat);
             contentTxt.setText("CONTENT: " + scanContent);
 
         }else{
@@ -159,5 +157,5 @@ json choice::   http://scienceweek58.herokuapp.com/api/choice_votes
 
                 http://scienceweek58.herokuapp.com/api/poll_tables
 
-
+user_id    choice_vote_id   poll_vote_id
  */

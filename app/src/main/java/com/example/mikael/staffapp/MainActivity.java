@@ -16,7 +16,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends ActionBarActivity {
 
-    private TextView formatTxt, contentTxt;
+    private TextView contentTxt;
 
     private String scanContent = "";
     private String scanFormat = "";
@@ -31,7 +31,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        formatTxt = (TextView)findViewById(R.id.scan_format);
         contentTxt = (TextView)findViewById(R.id.scan_content);
 
         loadPlace = new LoadPlaceTask(MainActivity.this);
@@ -92,7 +91,6 @@ public class MainActivity extends ActionBarActivity {
             scanContent = scanningResult.getContents();
             scanFormat = scanningResult.getFormatName();
 
-            formatTxt.setText("FORMAT: " + scanFormat);
             contentTxt.setText("CONTENT: " + scanContent);
 
         }else{

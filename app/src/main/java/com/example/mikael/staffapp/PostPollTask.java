@@ -65,8 +65,8 @@ public class PostPollTask extends AsyncTask<String, Void, String> {
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.accumulate("user_id", pollVote.getUser_id());
-            jsonObject.accumulate("poll_id", pollVote.getPoll_id());
-            jsonObject.accumulate("choice", pollVote.getChoice());
+            jsonObject.accumulate("choice_vote_id", pollVote.getChoice());
+            jsonObject.accumulate("poll_vote_id", pollVote.getPoll_id());
 
             json = jsonObject.toString();
 
