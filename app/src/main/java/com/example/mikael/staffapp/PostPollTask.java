@@ -25,11 +25,13 @@ import java.io.InputStreamReader;
 public class PostPollTask extends AsyncTask<String, Void, String> {
     private Context mContext;
     private PollVote pollVote;
+    int count = 0;
 
 
     public PostPollTask(Context context, PollVote mPollVote){
         mContext = context;
         pollVote = mPollVote;
+        count++;
     }
 
     @Override
@@ -42,15 +44,21 @@ public class PostPollTask extends AsyncTask<String, Void, String> {
         TextView textView = (TextView)((Activity)mContext).findViewById(R.id.sentstatus_textview);
         textView.setText(result);
 
-        char confirm = result.charAt(result.length()-2);
-        String sendStatus = "";
-        if(confirm == '1'){
-            sendStatus = "Send Complete";
-        }else{
-            sendStatus = "Try Again";
-        }
-        Toast toast = Toast.makeText(mContext,sendStatus, Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(mContext,"Send Complete", Toast.LENGTH_SHORT);
         toast.show();
+
+        /*if(count == 2){
+            char confirm = result.charAt(result.length()-2);
+            String sendStatus = "";
+            if(confirm == '1'){
+                sendStatus = "Send Complete";
+            }else{
+                sendStatus = "Try Again";
+            }
+            Toast toast = Toast.makeText(mContext,sendStatus, Toast.LENGTH_SHORT);
+            toast.show();
+            count=0;
+        }*/
     }
 
     private String postdata(String strUrl,PollVote pollVote){

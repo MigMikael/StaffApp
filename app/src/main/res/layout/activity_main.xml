@@ -35,21 +35,19 @@
                 android:layout_centerVertical="true"
                 android:onClick="scanQR"
                 android:textColor="@color/button_text_color"
-                android:backgroundTint="@color/button_color"
                 android:background="@drawable/ic_qr"
                 android:layout_margin="10dp" />
 
-            <TextView
-                android:id="@+id/scan_content"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/scan_content2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textIsSelectable="true"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@id/scan_button"
-                android:layout_marginBottom="5dp"
-                android:text="@string/hello_world"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
+
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
@@ -81,8 +79,8 @@
                 android:layout_above="@+id/spacecenter"
                 android:background="@color/button_color"
                 android:textColor="@color/button_text_color"
-                android:padding="10dp"
-                android:layout_margin="5dp"/>
+                android:padding="8dp"
+                android:layout_margin="10dp"/>
 
             <Space
                 android:id="@+id/spacecenter"
@@ -110,6 +108,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/hello_world"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:visibility="gone"/>
 
 </LinearLayout>

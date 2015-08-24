@@ -25,25 +25,24 @@
         <LinearLayout
             android:id="@+id/qr_top_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
             android:orientation="horizontal">
 
             <Button android:id="@+id/scan_button"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:onClick="scanQR"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/button_color"
+                android:layout_margin="5dp"
                 android:background="@drawable/ic_qr"
                 android:layout_weight="1"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:gravity="center"
-                android:layout_weight="19">
+                android:layout_weight="49">
 
                 <TextView
                     android:id="@+id/scan_content"
@@ -131,8 +130,8 @@
         android:layout_weight="1">
         <RelativeLayout
             android:id="@+id/q2_top_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginBottom="5dp">
 
             <TextView
@@ -157,7 +156,9 @@
                 android:layout_below="@+id/q2_question"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:stepSize="1.0"/>
+                android:stepSize="1.0"
+                android:numStars="5"
+                android:layout_margin="0dp"/>
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
@@ -179,6 +180,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/hello_world"
-        android:gravity="center"/>
+        android:gravity="center"
+        />
 
 </LinearLayout>

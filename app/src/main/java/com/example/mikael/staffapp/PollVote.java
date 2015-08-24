@@ -4,6 +4,7 @@ package com.example.mikael.staffapp;
  * Created by Mig on 16-Aug-15.
  */
 public class PollVote {
+
     private String user_id;
     private String poll_vote_id;
     private String choice_vote_id;
@@ -11,12 +12,6 @@ public class PollVote {
     public PollVote(String user_id, String poll_id) {
         this.user_id = user_id;
         this.poll_vote_id = poll_id;
-    }
-
-    public PollVote(String user_id, String poll_id, String choice) {
-        this.user_id = user_id;
-        this.poll_vote_id = poll_id;
-        this.choice_vote_id = choice;
     }
 
     public String getUser_id() {

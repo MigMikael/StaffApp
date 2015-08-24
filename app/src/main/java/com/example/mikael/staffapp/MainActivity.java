@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,10 +17,9 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends ActionBarActivity {
 
-    private TextView contentTxt;
+    private EditText contentText;
 
     private String scanContent = "";
-    private String scanFormat = "";
 
     private CheckPoint checkPoint;
     LoadPlaceTask loadPlace;
@@ -31,23 +31,27 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        contentTxt = (TextView)findViewById(R.id.scan_content);
+        contentText = (EditText)findViewById(R.id.scan_content2);
 
         loadPlace = new LoadPlaceTask(MainActivity.this);
         loadPlace.execute("http://scienceweek58.herokuapp.com/api/places");
-        //Toast toast = Toast.makeText(MainActivity.this,roomName[1], Toast.LENGTH_SHORT);
-        //toast.show();
 
         sendButton = (FloatingActionButton) findViewById(R.id.send_button);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //checkPoint = new CheckPoint(scanContent,loadPlace.getSelectRoom());
-                checkPoint = new CheckPoint("53", loadPlace.getSelectRoom());
+                scanContent = contentText.getText().toString();
+
+                checkPoint = new CheckPoint(scanContent,loadPlace.getSelectRoom());
+                //checkPoint = new CheckPoint("53", loadPlace.getSelectRoom());
                 PostTask task = new PostTask(MainActivity.this, checkPoint);
                 task.execute("http://scienceweek58.herokuapp.com/api/check_points");
                 //task.execute("http://posttestserver.com/post.php");
-                //task.execute("http://httpbin.org/post");
+
+                if(loadPlace.getSelectRoom().equals("3")){
+                    Intent i = new Intent("com.example.mikael.staffapp.PollActivity");
+                    startActivity(i);
+                }
             }
         });
     }
@@ -88,10 +92,9 @@ public class MainActivity extends ActionBarActivity {
 
         if (scanningResult != null) {
 
-            scanContent = scanningResult.getContents();
-            scanFormat = scanningResult.getFormatName();
+            String result = scanningResult.getContents();
 
-            contentTxt.setText("CONTENT: " + scanContent);
+            contentText.setText(result);
 
         }else{
             Toast toast = Toast.makeText(getApplicationContext(),"No scan data received!", Toast.LENGTH_SHORT);

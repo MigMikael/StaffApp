@@ -47,13 +47,13 @@ public class PollActivity extends ActionBarActivity {
         loadPoll = new LoadPollTask(PollActivity.this);
         loadPoll.execute("http://scienceweek58.herokuapp.com/api/poll_votes");
 
-        q1PollVote = new PollVote("53","1");
-        //q1PollVote = new PollVote(scanContent,"1");
+        //q1PollVote = new PollVote("1","1");
+        q1PollVote = new PollVote(scanContent,"1");
         choice1 = (RadioButton) findViewById(R.id.q1_choice1);
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                q1PollVote.setChoice("1");
+                q1PollVote.setChoice("12");
                 Toast.makeText(PollActivity.this,q1PollVote.getChoice(),Toast.LENGTH_SHORT).show();
             }
         });
@@ -61,7 +61,7 @@ public class PollActivity extends ActionBarActivity {
         choice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                q1PollVote.setChoice("2");
+                q1PollVote.setChoice("13");
                 Toast.makeText(PollActivity.this,q1PollVote.getChoice(),Toast.LENGTH_SHORT).show();
             }
         });
@@ -69,18 +69,19 @@ public class PollActivity extends ActionBarActivity {
         choice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                q1PollVote.setChoice("3");
+                q1PollVote.setChoice("14");
                 Toast.makeText(PollActivity.this,q1PollVote.getChoice(),Toast.LENGTH_SHORT).show();
             }
         });
 
-        q2PollVote = new PollVote("53", "2");
-        //q2PollVote = new PollVote(scanContent, "2");
+        //q2PollVote = new PollVote("53", "2");
+        q2PollVote = new PollVote(scanContent, "2");
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean b) {
                 int rateInt = (int)rating;
+                rateInt+=14;
                 q2PollVote.setChoice(String.valueOf(rateInt));
             }
         });
@@ -90,8 +91,8 @@ public class PollActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
-                //PostPollTask taskOne = new PostPollTask(PollActivity.this, q1PollVote);
-                //taskOne.execute("http://scienceweek58.herokuapp.com/api/poll_tables");
+                PostPollTask taskOne = new PostPollTask(PollActivity.this, q1PollVote);
+                taskOne.execute("http://scienceweek58.herokuapp.com/api/poll_tables");
                 //taskOne.execute("http://posttestserver.com/post.php");
 
                 PostPollTask taskTwo = new PostPollTask(PollActivity.this, q2PollVote);
@@ -140,7 +141,7 @@ public class PollActivity extends ActionBarActivity {
             scanContent = scanningResult.getContents();
             scanFormat = scanningResult.getFormatName();
 
-            contentTxt.setText("CONTENT: " + scanContent);
+            contentTxt.setText("ID: " + scanContent);
 
         }else{
             Toast toast = Toast.makeText(getApplicationContext(),"No scan data received!", Toast.LENGTH_SHORT);
