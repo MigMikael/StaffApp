@@ -14,6 +14,10 @@ public class PollVote {
         this.poll_vote_id = poll_id;
     }
 
+    public PollVote(String poll_vote_id) {
+        this.poll_vote_id = poll_vote_id;
+    }
+
     public String getUser_id() {
         return user_id;
     }

@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -21,10 +22,9 @@ import com.google.zxing.integration.android.IntentResult;
  */
 public class PollActivity extends ActionBarActivity {
 
-    private TextView contentTxt;
+    private EditText contentText;
 
     private String scanContent = "";
-    private String scanFormat = "";
 
     LoadPollTask loadPoll;
 
@@ -42,13 +42,16 @@ public class PollActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poll);
 
-        contentTxt = (TextView)findViewById(R.id.scan_content);
+        contentText = (EditText)findViewById(R.id.scan_content2);
+
+        Bundle bundle = getIntent().getExtras();
+        scanContent = bundle.getString("id");
+        contentText.setText(scanContent);
 
         loadPoll = new LoadPollTask(PollActivity.this);
         loadPoll.execute("http://scienceweek58.herokuapp.com/api/poll_votes");
 
-        //q1PollVote = new PollVote("1","1");
-        q1PollVote = new PollVote(scanContent,"1");
+        q1PollVote = new PollVote("1");
         choice1 = (RadioButton) findViewById(R.id.q1_choice1);
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,8 +77,7 @@ public class PollActivity extends ActionBarActivity {
             }
         });
 
-        //q2PollVote = new PollVote("53", "2");
-        q2PollVote = new PollVote(scanContent, "2");
+        q2PollVote = new PollVote("2");
         ratingBar = (RatingBar) findViewById(R.id.ratingBar);
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -91,10 +93,12 @@ public class PollActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
+                q1PollVote.setUser_id(contentText.getText().toString());
                 PostPollTask taskOne = new PostPollTask(PollActivity.this, q1PollVote);
                 taskOne.execute("http://scienceweek58.herokuapp.com/api/poll_tables");
                 //taskOne.execute("http://posttestserver.com/post.php");
 
+                q2PollVote.setUser_id(contentText.getText().toString());
                 PostPollTask taskTwo = new PostPollTask(PollActivity.this, q2PollVote);
                 taskTwo.execute("http://scienceweek58.herokuapp.com/api/poll_tables");
                 //taskTwo.execute("http://posttestserver.com/post.php");
@@ -122,31 +126,6 @@ public class PollActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void scanQR(View view){
-        IntentIntegrator integrator = new IntentIntegrator(this);
-        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-        integrator.setPrompt(" ");
-        integrator.setResultDisplayDuration(0);
-        integrator.setCameraId(0);  // Use a specific camera of the device
-        integrator.initiateScan();
-    }
-    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-
-        IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-
-        if (scanningResult != null) {
-
-            scanContent = scanningResult.getContents();
-            scanFormat = scanningResult.getFormatName();
-
-            contentTxt.setText("ID: " + scanContent);
-
-        }else{
-            Toast toast = Toast.makeText(getApplicationContext(),"No scan data received!", Toast.LENGTH_SHORT);
-            toast.show();
-        }
     }
 }
 

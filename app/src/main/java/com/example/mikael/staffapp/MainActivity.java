@@ -41,15 +41,17 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 scanContent = contentText.getText().toString();
+                //Toast.makeText(MainActivity.this,scanContent,Toast.LENGTH_SHORT);
 
                 checkPoint = new CheckPoint(scanContent,loadPlace.getSelectRoom());
-                //checkPoint = new CheckPoint("53", loadPlace.getSelectRoom());
+
                 PostTask task = new PostTask(MainActivity.this, checkPoint);
                 task.execute("http://scienceweek58.herokuapp.com/api/check_points");
                 //task.execute("http://posttestserver.com/post.php");
 
-                if(loadPlace.getSelectRoom().equals("3")){
+                if(loadPlace.getSelectRoom().equals("2")){
                     Intent i = new Intent("com.example.mikael.staffapp.PollActivity");
+                    i.putExtra("id",scanContent);
                     startActivity(i);
                 }
             }

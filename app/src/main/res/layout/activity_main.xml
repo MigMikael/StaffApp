@@ -44,9 +44,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/scan_button"
                 android:layout_centerHorizontal="true"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="ScanQR or TypeID" />
 
 
         </RelativeLayout>
