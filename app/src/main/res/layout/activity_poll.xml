@@ -33,6 +33,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="5dp"
+                android:onClick="scanQR"
                 android:background="@drawable/ic_qr"
                 android:layout_weight="1"/>
             <LinearLayout
@@ -51,7 +52,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:editable="false"
+                    android:editable="true"
                     />
 
             </LinearLayout>

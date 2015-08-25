@@ -45,8 +45,10 @@ public class PollActivity extends ActionBarActivity {
         contentText = (EditText)findViewById(R.id.scan_content2);
 
         Bundle bundle = getIntent().getExtras();
-        scanContent = bundle.getString("id");
-        contentText.setText(scanContent);
+        if(!bundle.getString("id").equals(" ")){
+            scanContent = bundle.getString("id");
+            contentText.setText(scanContent);
+        }
 
         loadPoll = new LoadPollTask(PollActivity.this);
         loadPoll.execute("http://scienceweek58.herokuapp.com/api/poll_votes");
@@ -126,6 +128,30 @@ public class PollActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void scanQR(View view){
+        IntentIntegrator integrator = new IntentIntegrator(this);
+        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+        integrator.setPrompt(" ");
+        integrator.setResultDisplayDuration(0);
+        integrator.setCameraId(0);  // Use a specific camera of the device
+        integrator.initiateScan();
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+
+        IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+
+        if (scanningResult != null) {
+
+            String result = scanningResult.getContents();
+
+            contentText.setText(result);
+
+        }else{
+            Toast toast = Toast.makeText(getApplicationContext(),"No scan data received!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 }
 

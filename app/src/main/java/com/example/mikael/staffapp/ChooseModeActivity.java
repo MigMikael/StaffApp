@@ -49,6 +49,16 @@ public class ChooseModeActivity extends Activity {
             }
         });
 
+        Button PollStaff = (Button)findViewById(R.id.PollButton);
+        PollStaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent("com.example.mikael.staffapp.PollActivity");
+                i.putExtra("id"," ");
+                startActivity(i);
+            }
+        });
+
     }
 
     public boolean isConnected(){
